@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            CyberPunk AI Project
 tagline:          'A futuristic static website project.'
 description:      'Cool stuff has begun.'
-url:              https://rasteia.github.io
+url: 'https://rasteia.github.io'
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
