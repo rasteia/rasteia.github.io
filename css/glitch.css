@@ -15,39 +15,39 @@
 
 .glitch:before {
   left: 2px;
-  text-shadow: -2px 0 6px #00ff00;
+  text-shadow: -2px 0 #00ff00;
   animation: glitch-anim 2s linear infinite;
 }
 
 .glitch:after {
   left: -2px;
-  text-shadow: 2px 0 6px #ff0000;
+  text-shadow: 2px 0 #ff0000;
   animation: glitch-anim 3s linear infinite;
 }
 
 @keyframes glitch-anim {
   0% {
-    clip: rect(21px, 9999px, 23px, 0);
+    clip: rect(41px, 9999px, 13px, 0);
     transform: skew(0.5deg);
   }
   20% {
-    clip: rect(51px, 9999px, 59px, 0);
+    clip: rect(65px, 9999px, 58px, 0);
     transform: skew(0.2deg);
   }
   40% {
-    clip: rect(9px, 9999px, 79px, 0);
+    clip: rect(60px, 9999px, 22px, 0);
     transform: skew(0.3deg);
   }
   60% {
-    clip: rect(7px, 9999px, 66px, 0);
+    clip: rect(3px, 9999px, 6px, 0);
     transform: skew(0.4deg);
   }
   80% {
-    clip: rect(26px, 9999px, 70px, 0);
+    clip: rect(40px, 9999px, 31px, 0);
     transform: skew(0.3deg);
   }
   100% {
-    clip: rect(31px, 9999px, 35px, 0);
+    clip: rect(59px, 9999px, 58px, 0);
     transform: skew(0.5deg);
   }
 }
