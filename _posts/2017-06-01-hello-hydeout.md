@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <span class="glitch">Hello CyberPunk</span>
+title: <span>Hello CyberPunk</span>
 excerpt_separator:  <!--more-->
 ---
 
