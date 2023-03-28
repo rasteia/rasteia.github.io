@@ -1,30 +1,30 @@
-$gray-1: #f9f9f9 !default;
-$gray-2: #e5e5e5 !default;
-$gray-3: #ccc !default;
-$gray-4: #767676 !default;
-$gray-5: #515151 !default;
-$gray-6: #313131 !default;
+$gray-1: #2d2d2d !default;
+$gray-2: #474747 !default;
+$gray-3: #5e5e5e !default;
+$gray-4: #8f8f8f !default;
+$gray-5: #b8b8b8 !default;
+$gray-6: #d2d2d2 !default;
 
-$red: #ac4142 !default;
-$orange: #d28445 !default;
-$yellow: #f4bf75 !default;
-$green: #90a959 !default;
-$cyan: #75b5aa !default;
-$blue: #268bd2 !default;
-$brown: #8f5536 !default;
+$red: #ff6363 !default;
+$orange: #ffb74d !default;
+$yellow: #ffe082 !default;
+$green: #b2ff59 !default;
+$cyan: #80deea !default;
+$blue: #4dd0e1 !default;
+$purple: #ba68c8 !default;
 
-$root-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif !default;
-$root-font-size: 1rem !default;
+$root-font-family: 'Roboto Mono', monospace !default;
+$root-font-size: 16px !default;
 $root-line-height: 1.5 !default;
 
 $body-color: $gray-5 !default;
 $body-muted: $gray-4 !default;
-$body-bg: #fff !default;
-$link-color: $blue !default;
-$heading-color: $gray-6 !default;
+$body-bg: #212121 !default;
+$link-color: $cyan !default;
+$heading-color: $gray-1 !default;
 
 $border-color: $gray-2 !default;
-$border-radius: 300px !default;
+$border-radius: 6px !default;
 $padding-v: 1em !default;
 $padding-h: 1.5em !default;
 $heading-spacing: 0.5rem !default;
@@ -38,12 +38,12 @@ $box-shadow-size: 1px !default;
 $box-shadow-opacity: 0.16 !default;
 $default-box-shadow: $box-shadow-size $box-shadow-size $box-shadow-size rgba(0, 0, 0, $box-shadow-opacity);
 
-$code-font-family: Menlo, Monaco, 'Courier New', monospace !default;
-$code-color: #bf616a !default;
+$code-font-family: 'Roboto Mono', monospace !default;
+$code-color: $purple !default;
 
 // Hyde theming
-$sidebar-bg-color: #202020 !default;
-$sidebar-fg-color: #fff !default;
+$sidebar-bg-color: #181818 !default;
+$sidebar-fg-color: #b8b8b8 !default;
 $sidebar-sticky: true !default;
 $layout-reverse: false !default;
 

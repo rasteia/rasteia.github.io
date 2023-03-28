@@ -27,4 +27,14 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.feed.path | default: 'feed.xml' | relative_url }}" />
 
   {% include custom-head.html %}
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/glitch.css">
+  <script>
+    // Activate the glitch effect on page load
+    window.onload = function() {
+      var el = document.getElementsByClassName('glitch')[0];
+      el.setAttribute('data-text', el.innerHTML);
+    };
+  </script>
+  
 </head>
