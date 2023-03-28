@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello Hydeout
+title: <span class="glitch">Hello CyberPunk</span>
 excerpt_separator:  <!--more-->
 ---
 
