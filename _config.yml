@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            CyberPunk AI Project
+title:            Cyber Punk AI Project
 tagline:          'A futuristic static website project.'
 description:      'Cool stuff has begun.'
 url: 'https://rasteia.github.io'
