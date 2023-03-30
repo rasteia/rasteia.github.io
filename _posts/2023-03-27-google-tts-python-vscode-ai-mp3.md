@@ -21,7 +21,7 @@ tags:
 ---
 
 <audio controls>
-  <source src="/assets/audio/tts.mp3" type="
+  <source src="https://rasteia.github.io/assets/audio/tts.mp3" type="
 
 
 ## Best way to generate text to mp3 audio for free
