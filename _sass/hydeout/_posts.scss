@@ -7,7 +7,6 @@
   text-transform: capitalize;
 }
 
-// Blog post or page title
 .page-title,
 .post-title {
   margin-top: 0;
@@ -16,13 +15,14 @@
 .page-title,
 .post-title,
 .post-title a {
-  color: $heading-color;
+  color: random-color(); // replace $heading-color with random-color()
 }
 
 h2.post-title,
 h2.page-title {
   font-size: 2rem;
 }
+
 
 .post-tags a {
   font-size: 0.8em;

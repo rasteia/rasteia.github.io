@@ -5,13 +5,13 @@ $gray-4: #8f8f8f !default;
 $gray-5: #b8b8b8 !default;
 $gray-6: #d2d2d2 !default;
 
-$red: #ff6363 !default;
-$orange: #ffb74d !default;
-$yellow: #ffe082 !default;
-$green: #b2ff59 !default;
-$cyan: #80deea !default;
-$blue: #4dd0e1 !default;
-$purple: #ba68c8 !default;
+$red: #FF6B6B !default;
+$orange: #FFA352 !default;
+$yellow: #FFFF8C !default;
+$green: #44FFB2 !default;
+$cyan: #00FFFF !default;
+$blue: #56AFFF !default;
+$purple: #B84BFF !default;
 
 $root-font-family: 'Roboto Mono', monospace !default;
 $root-font-size: 16px !default;
@@ -21,8 +21,13 @@ $body-color: $gray-5 !default;
 $body-muted: $gray-4 !default;
 $body-bg: #212121 !default;
 $link-color: $cyan !default;
-$heading-color: $gray-1 !default;
+$heading-color: $blue !default;
+$heading-colors: #FF6B6B, #FFA352, #FFFF8C, #44FFB2, #00FFFF, #56AFFF, #B84BFF;
 
+@function random-color() {
+    @return nth($heading-colors, random(length($heading-colors)));
+  }
+  
 $border-color: $gray-2 !default;
 $border-radius: 6px !default;
 $padding-v: 1em !default;
