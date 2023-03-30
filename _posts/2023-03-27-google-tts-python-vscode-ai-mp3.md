@@ -20,6 +20,10 @@ tags:
 
 ---
 
+<audio controls>
+  <source src="/assets/audio/tts.mp3" type="
+
+
 ## Best way to generate text to mp3 audio for free
 
 There are several free text-to-speech (TTS) tools available online that can help you convert text to mp3 audio. Here are some popular ones:
