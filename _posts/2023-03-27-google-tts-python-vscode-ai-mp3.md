@@ -2,7 +2,22 @@
 layout: post
 title: "Text to Speech with Google TTS and Visual Studio Code AI Tutorial"
 date: 2023-03-27
-categories: tutorial
+categories:
+  - AI
+  - tutorial
+tags:
+  - categories
+  - AI
+  - tutorial
+  - google
+  - tts
+  - vs code
+  - visual studio
+  - speech
+  - text to speech
+  - mp3
+  - tts
+
 ---
 
 ## Best way to generate text to mp3 audio for free
