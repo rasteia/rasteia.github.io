@@ -3,10 +3,10 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Cyber Punk AI Project
+title:            AITech .Tips
 tagline:          'A futuristic static website project.'
 description:      'Cool stuff has begun.'
-url: 'https://rasteia.github.io'
+url: 'https://aitech.tips'
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -15,8 +15,8 @@ baseurl:          ''
                   # sidebar_blog_link below.
 
 author:
-  name:           'Dan'
-  url:            https://rasteia.github.io
+  name:           'AITechTips'
+  url:            https://aitech.tips
 
 paginate:         5
 # paginate_path:    '/page:num'

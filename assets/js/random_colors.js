@@ -21,3 +21,14 @@ function getRandomNeonColor() {
     });
   });
   
+  
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.IS_PREVIEW === "true" ?
+      process.env.CONTENTFUL_PREVIEW_TOKEN :
+      process.env.CONTENTFUL_DELIVERY_TOKEN
+  })
+  
+  // Alternatively you can use the CDN API as follows...
+  const baseUrl = process.env.IS_PREVIEW === "true" ? "preview.contentful.com" : "cdn.contentful.com"
+  
