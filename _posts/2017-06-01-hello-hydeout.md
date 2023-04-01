@@ -1,20 +1,18 @@
 ---
-layout: post
-title: Hello CyberPunk
-image: /assets/images/cpunk2.jfif
+audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2017-06-01-hello-hydeout.mp3\"
+  type=\"audio/mpeg\">\n              Your browser does not support the audio element.\n
+  \           </audio>\n            "
 categories:
-  - AI
-  - CyberPunk
+- AI
+- CyberPunk
+excerpt_separator: <!--more-->
+image: /assets/images/cpunk2.jfif
+layout: post
 tags:
-  - categories
-  - AI
-  - CyberPunk
-excerpt_separator:  <!--more-->
+- categories
+- AI
+- CyberPunk
+title: Hello CyberPunk
 ---
-
-<audio controls>
-  <source src="/assets/audio/hello.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 This site was designed by AI and implemented by man. I will continue to update with my AI projects.

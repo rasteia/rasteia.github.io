@@ -1,26 +1,23 @@
 ---
-layout: post
-title: "Setting Up a Site Hosted with GitHub Pages"
-date: 2023-03-27
-categories: jekyll github-pages
-image: /assets/images/cpunk1.jfif
+audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2023-03-29-setup-jekyll-github-pages.mp3\"
+  type=\"audio/mpeg\">\n              Your browser does not support the audio element.\n
+  \           </audio>\n            "
 categories:
-  - AI
-  - tutorial
-  - jekyll
-  - site
+- AI
+- tutorial
+- jekyll
+- site
+date: 2023-03-27
+image: /assets/images/cpunk1.jfif
+layout: post
 tags:
-  - categories
-  - AI
-  - tutorial
-  - jekyll
-  - site
+- categories
+- AI
+- tutorial
+- jekyll
+- site
+title: Setting Up a Site Hosted with GitHub Pages
 ---
-
-<audio controls>
-  <source src="/assets/audio/jekyll.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 If you want to set up a site hosted with GitHub Pages using Jekyll and Git, here are the steps you should follow:
 

@@ -1,20 +1,17 @@
 ---
-layout: post
-title: Introducing Cyber Punk AI Project
-image: /assets/images/cpunk1.jfif
+audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2013-12-28-introducing-hyde.mp3\"
+  type=\"audio/mpeg\">\n              Your browser does not support the audio element.\n
+  \           </audio>\n            "
 categories:
-  - AI
-  - site
+- AI
+- site
+image: /assets/images/cpunk1.jfif
+layout: post
 tags:
-  - categories
-  - AI
+- categories
+- AI
+title: Introducing Cyber Punk AI Project
 ---
-
-
-<audio controls>
-  <source src="/assets/audio/intro.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
 Cyber Punk AI Project is a project between man and machine. Site is [Jekyll](http://jekyllrb.com) with Hydeout theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler. Hosted on Github Pages, free. As recommended by GPT-4.
 

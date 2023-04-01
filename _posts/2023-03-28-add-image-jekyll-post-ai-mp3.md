@@ -1,26 +1,25 @@
 ---
-layout: post
-title: Adding A Post Image To Jekyll Blog
-date: 2023-03-29
+audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2023-03-28-add-image-jekyll-post-ai-mp3.mp3\"
+  type=\"audio/mpeg\">\n              Your browser does not support the audio element.\n
+  \           </audio>\n            "
 author: Dain
-image: /assets/images/cpunk4.jfif
 categories:
-  - AI
-  - tutorial
-  - jekyll
-  - site
+- AI
+- tutorial
+- jekyll
+- site
+date: 2023-03-29
+image: /assets/images/cpunk4.jfif
+layout: post
 tags:
-  - categories
-  - AI
-  - tutorial
-  - image
-  - jekyll
+- categories
+- AI
+- tutorial
+- image
+- jekyll
+title: Adding A Post Image To Jekyll Blog
 ---
 
-<audio controls>
-  <source src="/assets/audio/image.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 Adding a post image to your Jekyll blog using the Hydeout theme is a simple process. In this guide, we'll walk through the steps to add an image to a Jekyll post using Markdown syntax.
 
 First, let's assume that you have an image file you want to use saved in your Jekyll site's directory. For the purposes of this example, we'll use an image called "example-image.jpg" saved in the "assets/images" folder.

@@ -1,31 +1,27 @@
 ---
-layout: post
-title: "Text to Speech with Google TTS and Visual Studio Code AI Tutorial"
-date: 2023-03-27
+audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2023-03-27-google-tts-python-vscode-ai-mp3.mp3\"
+  type=\"audio/mpeg\">\n              Your browser does not support the audio element.\n
+  \           </audio>\n            "
 categories:
-  - AI
-  - tutorial
-tags:
-  - categories
-  - AI
-  - tutorial
-  - google
-  - tts
-  - vs code
-  - visual studio
-  - speech
-  - text to speech
-  - mp3
-  - tts
+- AI
+- tutorial
+date: 2023-03-27
 image: /assets/images/cpunk3.jfif
-
+layout: post
+tags:
+- categories
+- AI
+- tutorial
+- google
+- tts
+- vs code
+- visual studio
+- speech
+- text to speech
+- mp3
+- tts
+title: Text to Speech with Google TTS and Visual Studio Code AI Tutorial
 ---
-
-<audio controls>
-  <source src="/assets/audio/tts.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
 
 ## Best way to generate text to mp3 audio for free
 
