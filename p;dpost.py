@@ -103,8 +103,8 @@ def main():
 
             # Run image.py
             # print(f"Running image.py for {file}...")
-            # os.system(f"python {photo_script_path}
-            
+            # os.system(f"python {photo_script_path}")
+
 def main():
     src_dir = 'C:/Users/darde/Downloads/jekyllposts'
     dest_dir = './_posts'
@@ -150,10 +150,12 @@ def main():
                 print(f"Running tts.py for {file}...")
                 os.system(f"python {tts_script_path}")
 
+                # Set post_title variable
+                post_title = os.path.splitext(file)[0].replace('-', ' ').title()
+
                 # Run image.py
-                # print(f"Running image.py for {file}...")
-                # os.system(f"python {photo_script_path}")
+                print(f"Running image.py for {file}...")
+                os.system(f"python {photo_script_path} --prompt '{post.metadata['title']}'")
 
 if __name__ == "__main__":
     main()
-

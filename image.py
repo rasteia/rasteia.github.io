@@ -1,82 +1,59 @@
 import argparse
-import frontmatter
 import os
+import re
 import requests
-import shutil
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--existingnew', action='store_true')
+# Command line arguments
+parser = argparse.ArgumentParser(description='Generate images using the DALL-E 2 API.')
+parser.add_argument('prompt', help='The prompt to use for generating the image.')
 args = parser.parse_args()
 
-api_key = open("C:\\Users\\darde\\code\\ap.txt", "r").readline().strip()
-endpoint = "https://api.openai.com/v1/images/generations"
+# API setup
+with open('api_key.txt', 'r') as f:
+    api_key = f.read().strip()
+endpoint = 'https://api.openai.com/v1/images/generations'
+headers = {'Content-Type': 'application/json', 'Authorization': f'Bearer {api_key}',}
 
-def generate_image(title):
-    prompt = f"Create an image of {title}"
-    payload = {
-        "model": "image-alpha-001",
-        "prompt": prompt,
-        "num_images": 1,
-        "size": "256x256",
-        "response_format": "url"
+# Image generation
+def generate_image(prompt, cleaned_title):
+    # Set up the prompt and model parameters
+    data = {
+        'model': 'image-alpha-001',
+        'prompt': prompt,
+        'num_images': 1,
+        'size': '512x512',
     }
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    response = requests.post(endpoint, json=payload, headers=headers)
-    response.raise_for_status()
-    return response.json()['data'][0]['url']
 
-def generate_image_for_post(posts_dir, post_filename):
-    post_path = os.path.join(posts_dir, post_filename)
-    with open(post_path, 'r', encoding='utf-8') as f:
-        post = frontmatter.load(f)
-    title = post.metadata['title']
-    image_url = generate_image(title)
-    image_file = f"{title.replace(' ', '_')}.jpg"
-    image_path = os.path.join('./assets/images', image_file)
-    response = requests.get(image_url, stream=True)
-    response.raw.decode_content = True
+    # Make the API request
+    response = requests.post(endpoint, headers=headers, data=data)
+
+    # Check for errors
+    if response.status_code != 200:
+        print(f"Error generating image: {response.json()['error']}")
+        return None
+
+    # Extract the image URL from the response
+    image_url = response.json()['data'][0]['url']
+
+    # Download the image and save it to the specified file path
+    image_file = f"{cleaned_title}.png"
+    image_path = os.path.join('assets', 'images', image_file)
+    response = requests.get(image_url)
     with open(image_path, 'wb') as f:
-        shutil.copyfileobj(response.raw, f)
-    update_image_filename(post_path, image_file)
-    print(f"Generated image for {title} and saved it to {image_path}")
+        f.write(response.content)
+    print(f"Generated {prompt} and saved it to '{image_path}'")
 
-def update_image_filename(post_path, image_file):
-    with open(post_path, 'r', encoding='utf-8') as f:
-        post = frontmatter.load(f)
-    post.metadata['image'] = f'/assets/images/{image_file}'
-    with open(post_path, 'w', encoding='utf-8') as f:
-        frontmatter.dump(post, f)
-    print(f"Updated image filename in {post_path}")
-    
-def move_and_process_posts(src_dir, dest_dir, template_path, tts_script_path, existing_new=False):
-    for file in os.listdir(src_dir):
-        if file.endswith('.md'):
-            post_path = os.path.join(src_dir, file)
-            if existing_new:
-                generate_image_for_post(src_dir, file)
-            dest_path = os.path.join(dest_dir, file)
-            add_template_to_post(post_path, template_path)
-            move_post(post_path, dest_path)
-            process_post(dest_path, tts_script_path)
+    # Update the image path in the Jekyll post
+    post_path = os.path.join('_posts', f"{cleaned_title}.md")
+    update_image_in_post(post_path, f"/assets/images/{image_file}")
+    print(f"Updated image for post: {cleaned_title}")
 
-def main():
-    if args.existingnew:
-        for file in os.listdir('./_posts'):
-            if file.endswith('.md'):
-                post_path = os.path.join('./_posts', file)
-                generate_image_for_post(post_path)
-    else:
-        title = args.title
-        image_url = generate_image(title)
-        image_file = f"{title.replace(' ', '_')}.jpg"
-        image_path = os.path.join('./assets/images', image_file)
-        response = requests.get(image_url, stream=True)
-        response.raw.decode_content = True
-        with open(image_path, 'wb') as f:
-            shutil.copyfileobj(response.raw, f)
-        print(f"Generated image for '{title}' and saved it to {image_path}")
+    # Return the file path of the saved image
+    return image_file
 
-    main()
+
+if __name__ == '__main__':
+    post_title = args.prompt
+    prompt = f"An image for a post titled '{post_title}'"
+    cleaned_title = re.sub(r'[^\w\s-]', '', post_title).strip().lower().replace(' ', '-')
+    generate_image(prompt, cleaned_title)
