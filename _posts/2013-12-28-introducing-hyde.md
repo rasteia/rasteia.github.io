@@ -6,6 +6,7 @@ categories:
 - AI
 - site
 image: /assets/images/2013-12-28-introducing-hyde.png
+youtube: https://www.youtube.com/watch?v=ZXJXK8diCPU
 layout: post
 tags:
 - categories

@@ -2,7 +2,9 @@ import requests, json, os, argparse
 import frontmatter
 import re
 
-# Working image.py --all
+# Working gennewimageallposts.py --all
+# need to get it working where it only generates images for all posts with default image
+# then need to get it working where it only generates images for all posts with default image
 # Command line arguments
 parser = argparse.ArgumentParser(description='Generate images using the DALL-E 2 API.')
 parser.add_argument('--all', action='store_true', help='Generate images for all posts.')
