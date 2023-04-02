@@ -6,7 +6,7 @@ categories:
 - AI
 - tutorial
 date: '2023-04-01'
-image: /assets/images/cpunk3.jfif
+image: https://oaidalleapiprodscus.blob.core.windows.net/private/org-a2QK0JEElw5EOqS0Fwy4qUQ2/user-eQXzSJqpkRtH1ZMyafYzf4Cc/img-DxO3RsyFDsZSq9DlW0JE4dqk.png?st=2023-04-02T01%3A26%3A48Z&se=2023-04-02T03%3A26%3A48Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-04-02T00%3A36%3A37Z&ske=2023-04-03T00%3A36%3A37Z&sks=b&skv=2021-08-06&sig=fgClhV%2BOgbZkhtvxV1ul6HwCzBNFwxN74rl/32evw1E%3D
 layout: post
 tags:
 - categories
