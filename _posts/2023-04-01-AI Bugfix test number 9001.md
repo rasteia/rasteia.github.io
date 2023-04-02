@@ -6,7 +6,7 @@ categories:
 - AI
 - tutorial
 date: '2023-04-01'
-image: https://oaidalleapiprodscus.blob.core.windows.net/private/org-a2QK0JEElw5EOqS0Fwy4qUQ2/user-eQXzSJqpkRtH1ZMyafYzf4Cc/img-QA9gmE4iebiMG9OvT8sOBT0c.png?st=2023-04-02T02%3A23%3A20Z&se=2023-04-02T04%3A23%3A20Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-04-01T17%3A59%3A48Z&ske=2023-04-02T17%3A59%3A48Z&sks=b&skv=2021-08-06&sig=rFvPJI4qActwmNl94/ES7BMiqyKFvMaGnXksT77imbo%3D
+image: https://oaidalleapiprodscus.blob.core.windows.net/private/org-a2QK0JEElw5EOqS0Fwy4qUQ2/user-eQXzSJqpkRtH1ZMyafYzf4Cc/img-MtlGGTlcxKK0Dqg6kVuk9GBj.png?st=2023-04-02T02%3A39%3A45Z&se=2023-04-02T04%3A39%3A45Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-04-01T19%3A28%3A21Z&ske=2023-04-02T19%3A28%3A21Z&sks=b&skv=2021-08-06&sig=kcnbgDWoVoeEvZtmKok6KtkTkKNSRK/wpStpy5MMF5g%3D
 layout: post
 tags:
 - categories
