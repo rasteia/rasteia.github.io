@@ -1,62 +1,62 @@
 import tkinter as tk
-from tkinter import messagebox, filedialog
 import subprocess
 import threading
+import os
 
-# Function to run newpost.py in a new thread
-def run_newpost():
-    global process
-    process = subprocess.Popen(["python", "newpost.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    for line in process.stdout:
-        output_text.insert(tk.END, line)
-    process.communicate()
+class JPyPAApp(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("JPyPA")
+        self.geometry("500x300")
 
-def start_newpost():
-    if process is None or process.poll() is not None:
-        threading.Thread(target=run_newpost, daemon=True).start()
-    else:
-        messagebox.showerror("Error", "newpost.py is already running!")
+        self.jekyll_proc = None
+        self.newpost_proc = None
 
-def stop_newpost():
-    if process is not None and process.poll() is None:
-        process.terminate()
-        output_text.insert(tk.END, "newpost.py terminated.\n")
-    else:
-        messagebox.showerror("Error", "newpost.py is not running!")
+        self.create_widgets()
 
-def restart_newpost():
-    stop_newpost()
-    start_newpost()
+    def create_widgets(self):
+        self.jekyll_label = tk.Label(self, text="Jekyll Serve:")
+        self.jekyll_label.grid(row=0, column=0, pady=10)
 
-# Initialize the main window
-root = tk.Tk()
-root.title("JPyPA")
-root.geometry("600x400")
+        self.newpost_label = tk.Label(self, text="Newpost.py:")
+        self.newpost_label.grid(row=1, column=0, pady=10)
 
-# Create a menu bar
-menu = tk.Menu(root)
-root.config(menu=menu)
+        self.jekyll_button = tk.Button(self, text="Start", command=self.toggle_jekyll)
+        self.jekyll_button.grid(row=0, column=1, pady=10)
 
-# Create a Tools menu
-tools_menu = tk.Menu(menu)
-menu.add_cascade(label="Tools", menu=tools_menu)
-# Add items to the Tools menu here
+        self.newpost_button = tk.Button(self, text="Start", command=self.toggle_newpost)
+        self.newpost_button.grid(row=1, column=1, pady=10)
 
-# Create control buttons
-start_button = tk.Button(root, text="Start", command=start_newpost)
-start_button.pack(side=tk.LEFT, padx=5, pady=5)
+    def toggle_jekyll(self):
+        if not self.jekyll_proc:
+            self.start_jekyll()
+        else:
+            self.stop_jekyll()
 
-stop_button = tk.Button(root, text="Stop", command=stop_newpost)
-stop_button.pack(side=tk.LEFT, padx=5, pady=5)
+    def toggle_newpost(self):
+        if not self.newpost_proc:
+            self.start_newpost()
+        else:
+            self.stop_newpost()
 
-restart_button = tk.Button(root, text="Restart", command=restart_newpost)
-restart_button.pack(side=tk.LEFT, padx=5, pady=5)
+    def start_jekyll(self):
+        self.jekyll_proc = subprocess.Popen(["jekyll", "serve"])
+        self.jekyll_button.config(text="Stop")
 
-# Create output text box
-output_text = tk.Text(root, wrap=tk.WORD)
-output_text.pack(expand=True, fill=tk.BOTH, padx=5, pady=5)
+    def stop_jekyll(self):
+        self.jekyll_proc.terminate()
+        self.jekyll_proc = None
+        self.jekyll_button.config(text="Start")
 
-# Initialize the process variable
-process = None
+    def start_newpost(self):
+        self.newpost_proc = subprocess.Popen(["python", "newpost.py"])
+        self.newpost_button.config(text="Stop")
 
-root.mainloop()
+    def stop_newpost(self):
+        self.newpost_proc.terminate()
+        self.newpost_proc = None
+        self.newpost_button.config(text="Start")
+
+if __name__ == "__main__":
+    app = JPyPAApp()
+    app.mainloop()

@@ -112,4 +112,292 @@ while True:
 
 ```
 
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
+In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.How do I make newpost.py continue to monitor the directory for new files, should it not quit and just listen while running?
+
+
+To make `newpost.py` continue to monitor the directory for new files, you can use a loop that continuously checks for new files and processes them. Here's an example:
+
+```
+pythonCopy codeimport os
+import time
+
+posts_dir = 'C:/Users/darde/Downloads/jekyllposts'
+
+while True:
+    # Check for new files in the directory
+    new_files = [f for f in os.listdir(posts_dir) if f.endswith('.md')]
+
+    # Process the new files
+    for file in new_files:
+        # Process the file here...
+
+    # Wait for a few seconds before checking again
+    time.sleep(10)
+
+```
+
 In this example, the script checks for new files in the directory every 10 seconds using a loop that runs indefinitely (`while True`). When a new file is found, it is processed in the loop. The loop then waits for 10 seconds before checking again. This process continues indefinitely, so the script will continue to monitor the directory for new files as long as it is running.
