@@ -14,6 +14,11 @@ title: Introducing Cyber Punk AI Project
 youtube: https://www.youtube.com/watch?v=ZXJXK8diCPU
 ---
 
+<video width="100%" height="auto" controls>
+  <source src="/output_videos/2013-12-28-introducing-hyde.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 Cyber Punk AI Project is a project between man and machine. Site is [Jekyll](http://jekyllrb.com) with Hydeout theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler. Hosted on Github Pages, free. As recommended by GPT-4.
 
 ### Built by Man Designed by AI

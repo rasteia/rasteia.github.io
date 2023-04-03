@@ -1,11 +1,8 @@
 import os
 import re
 import argparse
-import sys
 import frontmatter
 from gtts import gTTS
-import html2text
-import pyttsx3
 
 def clean_text(text):
     text = re.sub(r'\n', ' ', text)  # Replace newlines with spaces

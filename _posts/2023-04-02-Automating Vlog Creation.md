@@ -1,66 +1,26 @@
-# autoblog.py
+---
+audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2023-04-01-Jekyll\
+  \ Workflow File Location.mp3\" type=\"audio/mpeg\">\n              Your browser\
+  \ does not support the audio element.\n            </audio>\n            "
+categories:
+- AI
+- tutorial
+date: '2023-04-02'
+image: /assets/images/2023-04-02-Automating Vlog Creation.png
+layout: post
+tags:
+- categories
+- AI
+- tutorial
+- template
+title: Automating Vlog Creation
+---
+Sure, you can modify the script to look for the specified default video in each post and then update the post with the new video link. To achieve this, you can follow these steps:
 
-from moviepy.editor import *
-import os
-import re
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-from googleapiclient.http import MediaFileUpload
+1.  Modify the `process_blog_posts` function to search for the specified default video and update the video source in the blog post:
 
-def upload_video_to_youtube(video_file, title, description, category_id, tags, credentials_json):
-    try:
-        # Authenticate using the service account JSON file
-        credentials = service_account.Credentials.from_service_account_file(credentials_json)
-        youtube = build('youtube', 'v3', credentials=credentials)
-
-        body = {
-            'snippet': {
-                'title': title,
-                'description': description,
-                'tags': tags,
-                'categoryId': category_id
-            },
-            'status': {
-                'privacyStatus': 'public'  # Set the privacy status of the uploaded video
-            }
-        }
-
-        # Upload the video
-        media = MediaFileUpload(video_file, chunksize=-1, resumable=True, mimetype='video/mp4')
-        request = youtube.videos().insert(part=','.join(body.keys()), body=body, media_body=media)
-        response = request.execute()
-
-        # Return the video ID
-        return response['id']
-    except HttpError as e:
-        print(f'An error occurred: {e}')
-        return None
-
-
-def generate_video(background_image, tts_mp3, output_video, text_content):
-    # Load the background image and the TTS MP3 file
-    image_clip = ImageClip(background_image)
-    audio_clip = AudioFileClip(tts_mp3)
-
-    # Set the duration of the image clip to match the duration of the audio clip
-    image_clip = image_clip.set_duration(audio_clip.duration)
-
-    # Create a TextClip with your desired text content, font, size, and color
-    text_clip = TextClip(text_content, fontsize=50, color='white', font='Arial-Bold')
-    text_clip = text_clip.set_position('center').set_duration(audio_clip.duration)
-
-    # Overlay the text on the background image
-    final_clip = CompositeVideoClip([image_clip, text_clip])
-
-    # Set the audio of the final clip to the TTS MP3 file
-    final_clip = final_clip.set_audio(audio_clip)
-
-    # Write the final video to a file
-    final_clip.write_videofile(output_video, fps=24, codec='libx264')
-
-
-def process_blog_posts(posts_dir, audio_dir, default_video_src, background_image):
+```
+pythonCopy codedef process_blog_posts(posts_dir, audio_dir, default_video_src, background_image):
     for file in os.listdir(posts_dir):
         if file.endswith(".md"):
             file_path = os.path.join(posts_dir, file)
@@ -106,7 +66,12 @@ def process_blog_posts(posts_dir, audio_dir, default_video_src, background_image
                             post_file.write(updated_content)
                         print(f"Updated blog post with new video link: {file}")
 
-if __name__ == "__main__":
+```
+
+2.  Update the `if __name__ == "__main__"` block to include the `default_video_src`:
+
+```
+pythonCopy codeif __name__ == "__main__":
     posts_dir = '_posts'
     audio_dir = 'assets/audio'
     default_video_src = '/output_video/default.mp4'  # Replace with your default video src
@@ -117,3 +82,7 @@ if __name__ == "__main__":
         os.makedirs('output_videos')
 
     process_blog_posts(posts_dir, audio_dir, default_video_src, background_image)
+
+```
+
+With these changes, the script will search for blog posts with the specified default video source, generate a new video for each post, upload it to YouTube, and update the video source in the post with the new video link.
