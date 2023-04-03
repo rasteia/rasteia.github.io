@@ -2,6 +2,8 @@
 audio_embed_code: "\n            <audio controls>\n              <source src=\"/assets/audio/2023-04-02-ChatGPT
   Python GUI Setup.mp3\" type=\"audio/mpeg\">\n              Your browser does not
   support the audio element.\n            </audio>\n            "
+video_embed_code: "\n            <video controls>\n              <source src=\"/output_video/default.mp4\" type=\"video/mpeg\">\n              Your browser\
+  \ does not support the video element.\n            </video>\n            "
 categories:
 - AI
 - tutorial

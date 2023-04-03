@@ -39,13 +39,6 @@ def run_newimage():
     except subprocess.CalledProcessError as e:
         print(f"Error running newimage.py: {e}")
 
-def run_newvid():
-    try:
-        subprocess.check_call(["python", "autovlog.py"])
-        print("Finished running autovlog.py")
-    except subprocess.CalledProcessError as e:
-        print(f"Error running autovlog.py: {e}")
-
 def main():
     src_dir = 'C:/Users/darde/Downloads/jekyllposts'
     dest_dir = './_posts'
@@ -92,9 +85,6 @@ def main():
 
                 # Run newimage.py
                 run_newimage()
-
-                # Push to GitHub
-                run_newvid()
 
                 # Push to GitHub
                 push_to_github()
